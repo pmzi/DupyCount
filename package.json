@@ -1,0 +1,29 @@
+{
+  "name": "filecounter",
+  "version": "1.0.0",
+  "description": "A Script Which Counts Files And Folders And Makes A Report Of THem",
+  "main": "counter.js",
+  "dependencies": {
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadow78/DupyCount.git"
+  },
+  "keywords": [
+    "filecounter",
+    "file",
+    "counter",
+    "duplicatecounter"
+  ],
+  "author": "Pouya MozaffarMagham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shadow78/DupyCount/issues"
+  },
+  "homepage": "https://github.com/shadow78/DupyCount#readme"
+}
