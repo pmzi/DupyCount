@@ -1,8 +1,11 @@
 {
   "name": "filecounter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Script Which Counts Files And Folders And Makes A Report Of THem",
   "main": "counter.js",
+  "bin": {
+    "dupy": "counter.js"
+  },
   "dependencies": {
     "yargs": "^10.0.3"
   },
