@@ -54,7 +54,8 @@ const spType = args.type;
 
 switch(args._[0]){
 
-    case "count"://if the command is count
+    case "count": //if the command is count
+    default:
 
        count(path, spType);//count files
 
