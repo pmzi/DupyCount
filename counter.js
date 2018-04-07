@@ -1,6 +1,10 @@
+#! /usr/bin/env node
+
 //requiring needed things
 
 const fs = require('fs');
+
+const pathNode = require('path');
 
 const yargs = require('yargs');
 
@@ -25,14 +29,14 @@ fileInfos = [];//{name:'',size:}
 
 yargs.command("count","Count All Files",{
     "path":{
-        demand:true,
-        describe:'Path',
-        alias:'p'
+        demand: false,
+        describe: 'Path',
+        alias: 'p'
     },
     "type":{
-        describe:"Special Type",
-        deman:false,
-        alias:"t"
+        describe: "Special Type",
+        demand: false,
+        alias: "t"
     }
 }).help();
 
@@ -40,7 +44,9 @@ yargs.command("count","Count All Files",{
 
 const args = yargs.argv;
 
-const path = args.path;
+args.path = args.path || './'
+
+const path = pathNode.join(process.cwd(), args.path);
 
 const spType = args.type;
 
@@ -48,9 +54,10 @@ const spType = args.type;
 
 switch(args._[0]){
 
-    case "count"://if the command is count
+    case "count": //if the command is count
+    default:
 
-       count(path,spType);//count files
+       count(path, spType);//count files
 
        showTheResult(spType);///show the result
 
